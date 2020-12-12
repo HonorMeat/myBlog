@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT BLOG</title>
+    <link rel="stylesheet" href="assets/source/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nerko+One&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="assets/source/jquery.js"></script>
+</head>
+<body>
+    <style>
+    /* Normalize */
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        *{
+            box-sizing: border-box;
+        }
+
+    /* Style */
+        .container {
+        max-width: 1170px;
+        margin: 0 auto;
+        cursor: default;
+        font-family: 'Roboto', sans-serif;
+        }
+
+        .header {
+        padding: 15px 0;
+        -webkit-box-shadow: 0 0 10px #000000;
+                box-shadow: 0 0 10px #000000;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        background: #ffffff;
+        }
+
+        .header .container .up {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        }
+
+        .header .container .up .left {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        }
+
+        .header .container .up .left .header-nav {
+        margin-left: 100px;
+        width: 300px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        }
+
+        .header .container .up .left .header-nav a {
+        text-decoration: none;
+        color: #000000;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        }
+
+        .header .container .up .left .header-nav a:hover {
+        color: #FF924A;
+        }
+
+        .header .container .up .reg a {
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        font-weight: 800;
+        border-radius: 5px;
+        text-decoration: none;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        padding: 15px 25px;
+        }
+
+        .header .container .up .reg .register {
+        border: 3px solid #C74343;
+        color: #C74343;
+        margin-right: 10px;
+        }
+
+        .header .container .up .reg .register:hover {
+        background: #F78F8F;
+        }
+
+        .header .container .up .reg .signin {
+        border: 3px solid #A16A4A;
+        color: #A16A4A;
+        }
+
+        .header .container .up .reg .signin:hover {
+        background: #FFC49C;
+        }
+
+        .intro {
+        margin-top: 123px;
+        height: 600px;
+        background: url(img/bg.jpg) no-repeat center;
+        background-size: cover;
+        text-align: center;
+        font-family: 'Nerko One', cursive;
+        color: #ffffff;
+        position: relative;
+        cursor: default;
+        }
+
+        .intro p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        font-size: 120px;
+        }
+
+        .about {
+        padding-top: 80px;
+        padding-bottom: 90px;
+        }
+
+        .about .container {
+        max-width: 930px;
+        }
+
+        .about .container .title {
+        font-family: 'Nerko One', cursive;
+        font-size: 48px;
+        }
+
+        .about .container p {
+        padding-top: 30px;
+        font-size: 24px;
+        line-height: 1.3;
+        margin-bottom: 40px;
+        }
+
+        .about .container a {
+        padding: 15px 30px;
+        border: 3px solid #40D52C;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #40D52C;
+        text-transform: uppercase;
+        font-weight: 800;
+        float: right;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        }
+
+        .about .container a:hover {
+        background: #40D52C;
+        color: #ffffff;
+        }
+
+        .footer {
+        background: #C74343;
+        padding: 30px 0;
+        }
+
+        .footer .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        color: #ffffff;
+        }
+
+        .footer .container p {
+        font-size: 18px;
+        }
+    </style>
+    
+    <header class="header">
+        <div class="container">
+            <div class="up">
+                <div class="left">
+                    <a href="#" class="logo"><img src="#"></a>
+
+                    <nav class="header-nav">
+                        <a href="#" class="header-nav__link">Main</a>
+                        <a href="#" class="header-nav__link">Blog</a>
+                        <a href="#" class="header-nav__link">Cabinet</a>
+                    </nav>
+                </div>
+
+                <div class="reg">
+                    <a href="#" class="register">Registration</a>
+                    <a href="#" class="signin">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="intro">
+        <p>
+            Welcome <br>
+            to the <br>
+            my Blog
+        </p>
+    </section>
+
+    <section class="about">
+        <div class="container">
+                <h1 class="title">About blog</h1>
+                <p class="text">
+                    {{ event.stext }}
+                </p>
+                <a href="#">Get Read</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Copyright by IT BLOG</p>
+            <p>by Kan4al (Timur)</p>
+        </div>
+    </footer>
+</body>
+</html>
